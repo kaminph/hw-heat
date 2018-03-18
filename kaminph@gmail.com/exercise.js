@@ -5,7 +5,8 @@ exercise.countRecords = function(data){
     // YOUR CODE
     // Return the total number of records
     //-------------------------------------------
-    return 'Error: countRecords not implemented'; 
+
+    return data.length; 
 };
 
 exercise.countDistrictCrimes = function(data,district){
@@ -14,7 +15,15 @@ exercise.countDistrictCrimes = function(data,district){
     // Return the number of crimes 
     // for the given district
     //-------------------------------------------
-    return 'Error: countDistrictCrimes not implemented'; 
+
+    //column 19 = district
+
+    var filtered = data.filter(function(value){
+        var comparison = value[19] == district;
+        return comparison;
+    });
+
+    return filtered.length; 
 };
 
 exercise.countPrimaryType = function(data,primaryType){
@@ -23,7 +32,15 @@ exercise.countPrimaryType = function(data,primaryType){
     // Return the number of crimes 
     // for the giving primary type
     //-------------------------------------------
-    return 'Error: countPrimaryType not implemented';
+
+    //column 13 = primary type
+
+    var filtered = data.filter(function(value){
+        var comparison = value[13] == primaryType;
+        return comparison;
+    });
+
+    return filtered.length; 
 };
 
 exercise.countLocation = function(data,location){
@@ -32,7 +49,15 @@ exercise.countLocation = function(data,location){
     // Return the number of crimes 
     // for the given location
     //-------------------------------------------
-    return 'Error: countLocation not implemented';
+
+    //column 15 = location type
+
+    var filtered = data.filter(function(value){
+        var comparison = value[15] == location;
+        return comparison;
+    });
+
+    return filtered.length; 
 };
 
 
@@ -48,7 +73,15 @@ exercise.buildLatLngPoint = function(crime){
     // point.longitude = crime[longitudeColumnNumber];
     // return point;    
     //-------------------------------------------    
-    return 'Error: buildLatLngPoint not implemented';
+
+    //column 26 = latitude
+    //column 28 = longitude
+
+    var point = {};
+    point.latitude = crime[26];
+    point.longitude = crime[28];
+
+    return point;
 };
 
 

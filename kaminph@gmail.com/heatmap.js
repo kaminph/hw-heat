@@ -84,4 +84,5 @@ function initialize(){
     heatmap.setMap(map); 
 }
 
+console.log('heatmap called');
 google.maps.event.addDomListener(window, 'load', initialize);

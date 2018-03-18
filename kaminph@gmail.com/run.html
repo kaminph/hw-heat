@@ -2,7 +2,7 @@
 <html>
 
 <!-- load google maps and crime data -->
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=visualization"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=visualization&key=AIzaSyBlnaNWNE_AC1AZzV-WWgVwkJmotJhGxq4"></script>
 <script src="crime_2012_december.json" ></script>
 
 <!-- load exercise code -->
@@ -33,6 +33,8 @@ console.log(locations);
 
 var points = [];
 var points = chicago.data.map(exercise.buildLatLngPoint);
+
+console.log(points);
 
 </script>
 
